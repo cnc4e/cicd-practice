@@ -85,10 +85,20 @@ Step 1 では、GitLab CI/CD から AWS に認証できることを確認する�
 GitLab CI/CD の `sub` クレームは次の形式です。
 
 ```text
-project_path:NAMESPACE/PROJECT_NAME:ref_type:branch:ref:BRANCH_NAME
+project_path:NAMESPACE/PROJECT_NAME:ref_type:TYPE:ref:REF_NAME
 ```
 
-信頼ポリシーの例:
+プロジェクト全体を対象にする場合と、main ブランチだけに制限する場合の例は次のとおりです。
+
+```text
+# プロジェクト全体（すべてのブランチ・タグ）
+project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:*
+
+# main ブランチだけに制限する
+project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:ref_type:branch:ref:main
+```
+
+信頼ポリシーの例（プロジェクト全体を対象にする場合）:
 
 ```json
 {
@@ -111,12 +121,6 @@ project_path:NAMESPACE/PROJECT_NAME:ref_type:branch:ref:BRANCH_NAME
     }
   ]
 }
-```
-
-main ブランチだけに制限したい場合は、`sub` を次のように絞れます。
-
-```text
-project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:ref_type:branch:ref:main
 ```
 
 ## サンプル pipeline の実行確認

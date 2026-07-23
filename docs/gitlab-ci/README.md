@@ -11,17 +11,18 @@
 ## 注意
 
 既存の pipeline や前の課題で作成した pipeline が意図せず実行される場合があります。
-課題の確認時に不要な pipeline が同時に動かないよう、必要に応じて次のような対応を行ってください。
+課題の確認時に不要な pipeline が同時に動かないよう、必要に応じて次のいずれかの対応を行ってください。
 
 - 対象外の job を一時的にコメントアウトする
 - `rules` や `only` / `except` で実行条件を絞る
 - `.gitlab-ci.yml` の `include` で参照しているファイルを一時的に除外する
+- `.gitlab-ci.yml` を別のファイル名（例: `.gitlab-ci.yml.bak`）に一時的にリネームする（GitLab は `.gitlab-ci.yml` 以外のファイルを CI 設定として読み込まないため、pipeline 自体が起動しなくなります）
 
 ## ステップ一覧
 
 | ステップ | タイトル                          | 内容                                                  |
 | -------- | --------------------------------- | ----------------------------------------------------- |
-| Step 1   | [環境準備](./01-setup/README.md)  | GitLab リポジトリの作成・OIDC 設定                    |
+| Step 1   | [環境準備](./01-setup/README.md)  | GitLab プロジェクトの作成・OIDC 設定                  |
 | Step 2   | [基礎編](./02-basic/README.md)    | pipeline の基本構造・`stages` / `jobs` / `script`     |
 | Step 3   | [応用編](./03-advanced/README.md) | 条件分岐・variables・secrets・artifact                |
 | Step 4   | [実践編（CI）](./04-ci/README.md) | Terraform の fmt / validate / plan を CI で自動化する |
