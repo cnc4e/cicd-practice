@@ -181,8 +181,6 @@ check-aws-oidc:
 - `<ROLE_ARN>`
   - 例: `arn:aws:iam::123456789012:role/gitlab-ci-oidc-role`
 
-> **注意**: ロール ARN には AWS アカウント ID が含まれます。確認後は ARN をプレースホルダに戻してからコミットしてください。Step 4 以降では、ARN を GitLab CI/CD Variables に移して参照する構成に変更します。
-
 > **補足**: このサンプルでは `aws sts assume-role-with-web-identity` を直接呼び出してクレデンシャルを取得しています。Step 4 以降では、Terraform の AWS provider が OIDC トークンを使った認証をサポートしているため、より簡潔な構成に変更します。
 
 ## 確認事項
@@ -196,6 +194,8 @@ check-aws-oidc:
 - GitLab CI/CD を実行できる
 - AWS 側の OIDC ロール設定が正しい
 - GitLab CI/CD から AWS に接続できる
+
+> **注意**: ロール ARN には AWS アカウント ID が含まれます。確認後は ARN をプレースホルダ（<ROLE_ARN>）に戻してからコミットしてください。Step 4 以降では、ARN を GitLab CI/CD Variables に移して参照する構成に変更します。
 
 ## このステップのゴール
 
