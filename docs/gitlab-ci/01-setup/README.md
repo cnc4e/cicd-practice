@@ -92,10 +92,10 @@ project_path:NAMESPACE/PROJECT_NAME:ref_type:TYPE:ref:REF_NAME
 
 ```text
 # プロジェクト全体（すべてのブランチ・タグ）
-project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:*
+project_path:myorg/cicd-practice:*
 
 # main ブランチだけに制限する
-project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:ref_type:branch:ref:main
+project_path:myorg/cicd-practice:ref_type:branch:ref:main
 ```
 
 信頼ポリシーの例（プロジェクト全体を対象にする場合）:
@@ -107,7 +107,7 @@ project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:ref_type:branch:ref:main
     {
       "Effect": "Allow",
       "Principal": {
-        "Federated": "arn:aws:iam::YOUR_AWS_ACCOUNT_ID:oidc-provider/gitlab.com"
+        "Federated": "arn:aws:iam::123456789012:oidc-provider/gitlab.com"
       },
       "Action": "sts:AssumeRoleWithWebIdentity",
       "Condition": {
@@ -115,7 +115,7 @@ project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:ref_type:branch:ref:main
           "gitlab.com:aud": "sts.amazonaws.com"
         },
         "StringLike": {
-          "gitlab.com:sub": "project_path:YOUR_NAMESPACE/YOUR_PROJECT_NAME:*"
+          "gitlab.com:sub": "project_path:myorg/cicd-practice:*"
         }
       }
     }
