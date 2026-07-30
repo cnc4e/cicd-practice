@@ -26,7 +26,7 @@ Step 2 以降では、このプロジェクトのリポジトリに `.gitlab-ci.
 
 > **注意**: 社内ネットワークやプロキシ設定などで SSH 通信が制限されている環境では、SSH で GitLab に接続できない場合があります。その場合は HTTPS 接続を利用してください。
 
-- [GitLab に SSH キーを追加する](https://docs.gitlab.com/user/ssh.html)
+- [GitLab で SSH キーを使用する](https://docs.gitlab.com/user/ssh.html)
 - [SSH 接続を確認する](https://docs.gitlab.com/ja-jp/user/ssh/#verify-your-ssh-connection)
 
 ## AWS 側の準備
@@ -49,8 +49,8 @@ AWS マネジメントコンソールで IAM を開き、OIDC プロバイダー
 
 参考:
 
+- [AWSでOpenID Connectを設定して一時的な認証情報を取得する](https://docs.gitlab.com/ci/cloud_services/aws/)
 - [Create an OpenID Connect (OIDC) identity provider in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html)
-- [GitLab CI/CD で OpenID Connect を使用して AWS に接続する](https://docs.gitlab.com/ci/cloud_services/aws/)
 
 ### 作成する IAM ロール
 
