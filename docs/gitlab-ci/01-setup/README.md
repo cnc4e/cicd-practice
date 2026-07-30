@@ -27,7 +27,7 @@ Step 2 以降では、このプロジェクトのリポジトリに `.gitlab-ci.
 > **注意**: 社内ネットワークやプロキシ設定などで SSH 通信が制限されている環境では、SSH で GitLab に接続できない場合があります。その場合は HTTPS 接続を利用してください。
 
 - [GitLab に SSH キーを追加する](https://docs.gitlab.com/user/ssh.html)
-- [SSH 接続を確認する](https://docs.gitlab.com/user/ssh.html#verify-that-you-can-connect)
+- [SSH 接続を確認する](https://docs.gitlab.com/ja-jp/user/ssh/#verify-your-ssh-connection)
 
 ## AWS 側の準備
 
