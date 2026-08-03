@@ -54,17 +54,15 @@ GitHub Actions 編・GitLab CI/CD 編を始める前に、次の 2 つを順番�
 
 ---
 
-### GitLab CI/CD 編
+### [GitLab CI/CD 編](./docs/gitlab-ci/README.md)
 
-> このセクションは現在準備中です。
-
-| ステップ | タイトル               | 内容                                                  |
-| -------- | ---------------------- | ----------------------------------------------------- |
-| Step 1   | 環境準備（準備中）     | GitLab リポジトリの作成・OIDC 設定                    |
-| Step 2   | 基礎編（準備中）       | pipeline の基本構造・`stages` / `jobs`                |
-| Step 3   | 応用編（準備中）       | 条件分岐・variables・secrets・artifact                |
-| Step 4   | 実践編（CI）（準備中） | Terraform の fmt / validate / plan を CI で自動化する |
-| Step 5   | 実践編（CD）（準備中） | Terraform apply を CD で実装する                      |
+| ステップ | タイトル                                        | 内容                                                  |
+| -------- | ----------------------------------------------- | ----------------------------------------------------- |
+| Step 1   | [環境準備](./docs/gitlab-ci/01-setup/README.md) | GitLab リポジトリの作成・OIDC 設定                    |
+| Step 2   | 基礎編（準備中）                                | pipeline の基本構造・`stages` / `jobs`                |
+| Step 3   | 応用編（準備中）                                | 条件分岐・variables・secrets・artifact                |
+| Step 4   | 実践編（CI）（準備中）                          | Terraform の fmt / validate / plan を CI で自動化する |
+| Step 5   | 実践編（CD）（準備中）                          | Terraform apply を CD で実装する                      |
 
 ---
 
