@@ -81,6 +81,7 @@ GitLab CI/CD の job は、Docker イメージを実行環境として動作し�
 **確認：**
 
 - 変更を push して、pipeline が正常に完了することを確認する
+- CI/CD > Pipelines で job をクリックし、ログの冒頭に `alpine:latest` のイメージを使用している旨が表示されていることを確認する
 - `Hello, GitLab CI/CD` が出力されることを確認する
 
 ## 2-3. 複数のコマンドを定義する
@@ -139,6 +140,7 @@ GitLab CI/CD はイベント起点で動きます。
 - push では pipeline が実行されないことを確認する
 - Merge Request を作成して pipeline が実行されることを確認する
 - CI/CD > Pipelines 画面でソースが `merge_request_event` になっていることを確認する
+- 確認できたら Merge Request を main にマージする
 
 ## 2-5. 複数の job を作る
 
@@ -146,7 +148,7 @@ pipeline は 1 つ以上の job から構成されます。
 
 job を分けることで、処理を役割ごとに分離できます。
 
-GitLab CI/CD では、同じ `stage` に属する job（または `stage` を指定していない job）は並列に実行されます。ここではまず、job を分けるとどうなるかを確認します。
+まずは job を複数定義するとどうなるかを確認します。
 
 ### プラクティス
 
