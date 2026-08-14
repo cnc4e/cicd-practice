@@ -140,7 +140,6 @@ GitLab CI/CD はイベント起点で動きます。
 - push では pipeline が実行されないことを確認する
 - Merge Request を作成して pipeline が実行されることを確認する
 - CI/CD > Pipelines 画面でソースが `merge_request_event` になっていることを確認する
-- 確認できたら Merge Request を main にマージする
 
 ## 2-5. 複数の job を作る
 
@@ -154,11 +153,10 @@ job を分けることで、処理を役割ごとに分離できます。
 
 前の課題で作成した pipeline に、以下の変更を加えてください。
 
-- `rules` を削除し、push で実行される状態に戻す
+- `rules` が残っている場合は削除し、push で実行される状態に戻す
 - job を 2 つに増やす
 - 1 つ目の job で `echo "job1"` を実行する
 - 2 つ目の job で `echo "job2"` を実行する
-- 2 つの job に `stage` の指定はしない
 
 > ヒント: どちらの job も同じ `image` を使って構いません。
 
