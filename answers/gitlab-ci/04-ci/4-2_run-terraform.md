@@ -32,6 +32,7 @@ include:
 - `entrypoint: [""]` は、`hashicorp/terraform` イメージの entrypoint を無効にして、GitLab が `script` をそのままシェル実行できるようにするための設定です。このイメージは `terraform` コマンドを直接実行する前提で entrypoint が設定されており、これはバージョンによらず共通の仕様なので、常に必要な設定です。
 - `id_tokens` で OIDC トークンを受け取り、Audience を `sts.amazonaws.com` に設定しています。
 - `before_script` でトークンを `/tmp/gitlab-oidc-token` に保存し、`AWS_WEB_IDENTITY_TOKEN_FILE` を設定することで、後続で AWS の Web Identity 認証に使えるようにしています。
+- `AWS_ROLE_ARN`（Step 1 で作成した IAM ロールの ARN）は GitLab の CI/CD Variables に登録しています。CI/CD Variables に登録した値はジョブ内で自動的に環境変数になるため、`before_script` での追加設定は不要です。Terraform の AWS provider は `AWS_WEB_IDENTITY_TOKEN_FILE` と `AWS_ROLE_ARN` の両方が揃うと、Web Identity 認証を自動的に解決します。
 - この段階では `terraform version` を実行して、Terraform 環境と OIDC の準備が正しくできていることを確認します。
 
 ---

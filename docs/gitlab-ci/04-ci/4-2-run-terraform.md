@@ -1,5 +1,7 @@
 # 4-2. CI から Terraform を実行できるようにする
 
+> **前提**: この課題は [4-1. Terraform コードを準備する](./4-1-setup-terraform.md) を完了していることを前提とします。
+
 CI から Terraform コマンドを実行するには、Terraform が使える実行環境を job に用意する必要があります。
 また、AWS に接続するために GitLab の OIDC トークンを受け取り、Web Identity 認証の準備を行います。
 
@@ -18,12 +20,14 @@ CI から Terraform コマンドを実行するには、Terraform が使える�
 - `before_script` で OIDC トークンをファイルに保存し、`AWS_WEB_IDENTITY_TOKEN_FILE` を設定する
 - `script` で `terraform version` を実行する
 - GitLab の CI/CD Variables に Terraform のバージョンを指定する変数（例: `TF_VERSION`）を追加する
+- GitLab の CI/CD Variables に、Step 1 で作成した IAM ロールの ARN を指定する変数（`AWS_ROLE_ARN`）を追加する
 
 > ヒント:
 >
 > - GitLab では `id_tokens` を使って OIDC トークンを取得できます
 > - `AWS_WEB_IDENTITY_TOKEN_FILE` を設定すると、AWS の Web Identity 認証に使えます
 > - `hashicorp/terraform` イメージは `terraform` コマンドを直接実行する前提で entrypoint が設定されているため、GitLab の shell 実行と竞合します。`entrypoint: [""]` で無効化してください
+> - Terraform の AWS provider は、`AWS_WEB_IDENTITY_TOKEN_FILE` に加えて `AWS_ROLE_ARN` が環境変数として設定されていると、Web Identity 認証を自動的に解決します。CI/CD Variables に登録した値はジョブ内で自動的に環境変数になるため、`before_script` での追加設定は不要です
 
 必要に応じて、次の公式ドキュメントを参照してください。
 
