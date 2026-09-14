@@ -81,3 +81,14 @@
 | 3-7. artifact を保存する                                   | [3-7_artifact.md](./gitlab-ci/03-advanced/3-7_artifact.md)                 |
 | 3-8. job 間で値を受け渡す                                  | [3-8_job-output.md](./gitlab-ci/03-advanced/3-8_job-output.md)             |
 | 3-9. `workflow:rules` で pipeline 全体の実行条件を制御する | [3-9_workflow-rules.md](./gitlab-ci/03-advanced/3-9_workflow-rules.md)     |
+
+### Step 4: 実践編（CI）
+
+| プラクティス                                    | 解答                                                           |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| 4-2. CI から Terraform を実行できるようにする   | [4-2_run-terraform.md](./gitlab-ci/04-ci/4-2_run-terraform.md) |
+| 4-3. terraform fmt でフォーマットを確認する     | [4-3_fmt.md](./gitlab-ci/04-ci/4-3_fmt.md)                     |
+| 4-4. terraform init / validate で構成を検証する | [4-4_validate.md](./gitlab-ci/04-ci/4-4_validate.md)           |
+| 4-5. terraform plan で変更内容を確認する        | [4-5_plan.md](./gitlab-ci/04-ci/4-5_plan.md)                   |
+| 4-6. Merge Request で CI を実行する             | [4-6_mr-trigger.md](./gitlab-ci/04-ci/4-6_mr-trigger.md)       |
+| 4-7. plan 結果を artifact として保存する        | [4-7_artifact.md](./gitlab-ci/04-ci/4-7_artifact.md)           |
