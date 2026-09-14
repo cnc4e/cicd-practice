@@ -43,9 +43,9 @@ apply:
 
 ## 解説
 
-- `plan` job は Step 4 の内容をそのまま維持しています。
+- `plan` job は Step 4 の内容をそのまま維持しつつ、`stage: test` を明示しています。
 - `apply` job は `needs: ["plan"]` により、`plan` job が成功した後にのみ実行されます。
-- `stage: deploy` を追加することで、役割を plan / deploy と分離できます。
+- `stages` を `test` と `deploy` に分けることで、`plan` は検証フェーズ、`apply` はデプロイフェーズとして役割を分離できます。
 
 この状態で、plan が成功した場合にのみ apply の実行順が決まります。
 

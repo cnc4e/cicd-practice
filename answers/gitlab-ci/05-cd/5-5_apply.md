@@ -64,8 +64,6 @@ apply:
       when: never
     - if: '$CI_COMMIT_BRANCH == "main"'
     - when: never
-  environment:
-    name: production
   script:
     - terraform -chdir=terraform init
     - terraform -chdir=terraform apply tfplan
@@ -79,7 +77,6 @@ apply:
 - `needs` の依存関係に `approve_apply` を追加することで、承認後に `apply` が実行されます。
 - `terraform -chdir=terraform apply tfplan` で、保存した plan をそのまま適用します。
 - `rules` により、PR 時には apply を止め、main ブランチのときだけ apply を実行するようにしています。
-- `environment: production` を付けることで、対象環境へのデプロイ意図を明確にしています。
 
 これが Step 5 の完成形です。
 

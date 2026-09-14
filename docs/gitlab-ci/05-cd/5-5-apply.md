@@ -1,6 +1,6 @@
 # 5-5. plan 結果を利用して terraform apply を実行する
 
-> **前提**: この課題は [5-4. GitLab の Environment で apply 前の承認を設定する](./5-4-environment.md) を完了していることを前提とします。
+> **前提**: この課題は [5-4. apply 前に手動承認を挟む](./5-4-environment.md) を完了していることを前提とします。
 
 `apply` job は `plan` job とは別の job で実行されるため、`plan` job で作成した `tfplan` ファイルをそのまま参照することはできません。job をまたいでファイルを渡すには、**artifact として保存し、別の job で取得**する必要があります。
 

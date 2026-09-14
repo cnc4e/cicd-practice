@@ -40,4 +40,4 @@ CD では、main ブランチへ push したときや手動実行したときに
 
 ---
 
-次のプラクティス：[5-4. GitLab の Environment で apply 前の承認を設定する](./5-4-environment.md)
+次のプラクティス：[5-4. apply 前に手動承認を挟む](./5-4-environment.md)

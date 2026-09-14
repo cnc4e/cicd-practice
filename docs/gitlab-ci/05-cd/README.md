@@ -17,7 +17,7 @@ CD では、検証済みの変更を安全に本番環境へ反映する仕組�
 - `workflow: rules`：main ブランチへの push と手動実行をトリガーとして扱う
 - `needs`：plan と apply を分離し、順序を制御する
 - `rules`：PR や非 main ブランチでは apply をスキップする
-- GitLab の Environment / deployment approval：apply 前の承認を設定する
+- 手動承認 job：apply 前に確認を挟む
 - `needs` と `artifacts: true`：plan job の artifact を apply job で取得する
 
 > 進め方：
@@ -36,13 +36,13 @@ CD では、検証済みの変更を安全に本番環境へ反映する仕組�
 
 ## プラクティス一覧
 
-| #   | タイトル                                                                  |
-| --- | ------------------------------------------------------------------------- |
-| 5-1 | [CD pipeline のトリガーを設定する](./5-1-trigger.md)                      |
-| 5-2 | [plan と apply を job 分割する](./5-2-job-split.md)                       |
-| 5-3 | [apply の実行条件を制御する](./5-3-skip-on-pr.md)                         |
-| 5-4 | [GitLab の Environment で apply 前の承認を設定する](./5-4-environment.md) |
-| 5-5 | [plan 結果を利用して terraform apply を実行する](./5-5-apply.md)          |
+| #   | タイトル                                                         |
+| --- | ---------------------------------------------------------------- |
+| 5-1 | [CD pipeline のトリガーを設定する](./5-1-trigger.md)             |
+| 5-2 | [plan と apply を job 分割する](./5-2-job-split.md)              |
+| 5-3 | [apply の実行条件を制御する](./5-3-skip-on-pr.md)                |
+| 5-4 | [apply 前に手動承認を挟む](./5-4-environment.md)                 |
+| 5-5 | [plan 結果を利用して terraform apply を実行する](./5-5-apply.md) |
 
 ---
 

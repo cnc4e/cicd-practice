@@ -16,6 +16,7 @@ job を分けることで、plan の結果を確認したうえで承認やス�
 
 - 既存の job を `plan` job に名前を変更する
   - 内容はそのまま変更しない
+  - `stage: test` を追加する
 - `apply` job を新たに追加する
   - `needs` を使って `plan` job の完了後に実行されるようにする
   - `stage` は `deploy` にする

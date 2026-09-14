@@ -95,10 +95,10 @@
 
 ### Step 5: 実践編（CD）
 
-| プラクティス                                           | 解答                                                       |
-| ------------------------------------------------------ | ---------------------------------------------------------- |
-| 5-1. CD pipeline のトリガーを設定する                  | [5-1_trigger.md](./gitlab-ci/05-cd/5-1_trigger.md)         |
-| 5-2. plan と apply を job 分割する                     | [5-2_job-split.md](./gitlab-ci/05-cd/5-2_job-split.md)     |
-| 5-3. apply の実行条件を制御する                        | [5-3_skip-on-pr.md](./gitlab-ci/05-cd/5-3_skip-on-pr.md)   |
-| 5-4. GitLab の Environment で apply 前の承認を設定する | [5-4_environment.md](./gitlab-ci/05-cd/5-4_environment.md) |
-| 5-5. plan 結果を利用して terraform apply を実行する    | [5-5_apply.md](./gitlab-ci/05-cd/5-5_apply.md)             |
+| プラクティス                                        | 解答                                                       |
+| --------------------------------------------------- | ---------------------------------------------------------- |
+| 5-1. CD pipeline のトリガーを設定する               | [5-1_trigger.md](./gitlab-ci/05-cd/5-1_trigger.md)         |
+| 5-2. plan と apply を job 分割する                  | [5-2_job-split.md](./gitlab-ci/05-cd/5-2_job-split.md)     |
+| 5-3. apply の実行条件を制御する                     | [5-3_skip-on-pr.md](./gitlab-ci/05-cd/5-3_skip-on-pr.md)   |
+| 5-4. apply 前に手動承認を挟む                       | [5-4_environment.md](./gitlab-ci/05-cd/5-4_environment.md) |
+| 5-5. plan 結果を利用して terraform apply を実行する | [5-5_apply.md](./gitlab-ci/05-cd/5-5_apply.md)             |
