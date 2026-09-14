@@ -20,7 +20,7 @@ job を分けることで、plan の結果を確認したうえで承認やス�
 - `apply` job を新たに追加する
   - `needs` を使って `plan` job の完了後に実行されるようにする
   - `stage` は `deploy` にする
-  - `script` には `echo "apply"` を 1 行だけ実行する step を定義する
+  - `script` には `echo "apply"` を 1 行だけ実行するように定義する
 
 > ヒント:
 >

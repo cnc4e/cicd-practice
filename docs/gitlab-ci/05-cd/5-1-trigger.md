@@ -6,7 +6,7 @@ Step 4 では、Merge Request をきっかけに CI を実行する pipeline を
 
 CD では、main ブランチの更新が取り込まれたタイミングで apply を実行できるようにする必要があります。そこで、**main ブランチへの push** をトリガーに追加し、手動実行も残す構成にします。
 
-この課題では、既存の `workflow: rules` を更新して、CD 用の実行条件を追加します。
+この課題では、`ci/terraform.gitlab-ci.yml` の `workflow: rules` を更新して、CD 用の実行条件を追加します。
 
 > 補足:
 >
@@ -16,7 +16,7 @@ CD では、main ブランチの更新が取り込まれたタイミングで ap
 
 ## プラクティス
 
-`.gitlab-ci.yml` の `workflow: rules` を、次の条件を満たすように更新してください。
+`ci/terraform.gitlab-ci.yml` の `workflow: rules` を、次の条件を満たすように更新してください。
 
 条件は次のとおりです。
 
