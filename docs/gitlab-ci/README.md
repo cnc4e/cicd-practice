@@ -22,12 +22,12 @@
 
 | ステップ | タイトル                           | 内容                                                  | 想定所要時間 |
 | -------- | ---------------------------------- | ----------------------------------------------------- | ------------ |
-| Step 1   | [環境準備](./01-setup/README.md)   | GitLab プロジェクトの作成・OIDC 設定                  | 30〜60分     |
-| Step 2   | [基礎編](./02-basic/README.md)     | pipeline の基本構造・`stages` / `jobs` / `script`     | 45〜60分     |
-| Step 3   | [応用編](./03-advanced/README.md)  | 条件分岐・variables・secrets・artifact                | 60〜90分     |
-| Step 4   | [実践編（CI）](./04-ci/README.md)  | Terraform の fmt / validate / plan を CI で自動化する | 60〜90分     |
-| Step 5   | [実践編（CD）](./05-cd/README.md)  | Terraform apply を CD で実装する                      | 45〜60分     |
-| Step 6   | [Runner 編](./06-runner/README.md) | GitLab-hosted runner / Self-managed runner            | 30〜45分     |
+| Step 1   | [環境準備](./01-setup/README.md)   | GitLab プロジェクトの作成・OIDC 設定                  | 60分         |
+| Step 2   | [基礎編](./02-basic/README.md)     | pipeline の基本構造・`stages` / `jobs` / `script`     | 60分         |
+| Step 3   | [応用編](./03-advanced/README.md)  | 条件分岐・variables・secrets・artifact                | 90分         |
+| Step 4   | [実践編（CI）](./04-ci/README.md)  | Terraform の fmt / validate / plan を CI で自動化する | 90分         |
+| Step 5   | [実践編（CD）](./05-cd/README.md)  | Terraform apply を CD で実装する                      | 60分         |
+| Step 6   | [Runner 編](./06-runner/README.md) | GitLab-hosted runner / Self-managed runner            | 45分         |
 
 ---
 
