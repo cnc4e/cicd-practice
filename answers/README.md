@@ -92,3 +92,13 @@
 | 4-5. terraform plan で変更内容を確認する        | [4-5_plan.md](./gitlab-ci/04-ci/4-5_plan.md)                   |
 | 4-6. Merge Request で CI を実行する             | [4-6_mr-trigger.md](./gitlab-ci/04-ci/4-6_mr-trigger.md)       |
 | 4-7. plan 結果を artifact として保存する        | [4-7_artifact.md](./gitlab-ci/04-ci/4-7_artifact.md)           |
+
+### Step 5: 実践編（CD）
+
+| プラクティス                                        | 解答                                                       |
+| --------------------------------------------------- | ---------------------------------------------------------- |
+| 5-1. CD pipeline のトリガーを設定する               | [5-1_trigger.md](./gitlab-ci/05-cd/5-1_trigger.md)         |
+| 5-2. plan と apply を job 分割する                  | [5-2_job-split.md](./gitlab-ci/05-cd/5-2_job-split.md)     |
+| 5-3. apply の実行条件を制御する                     | [5-3_skip-on-pr.md](./gitlab-ci/05-cd/5-3_skip-on-pr.md)   |
+| 5-4. apply 前に手動承認を挟む                       | [5-4_environment.md](./gitlab-ci/05-cd/5-4_environment.md) |
+| 5-5. plan 結果を利用して terraform apply を実行する | [5-5_apply.md](./gitlab-ci/05-cd/5-5_apply.md)             |
