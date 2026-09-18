@@ -13,7 +13,7 @@ CD では、main ブランチへ push したときや手動実行したときに
 条件は次のとおりです。
 
 - `merge_request_event` のときは `apply` を実行しない
-- `main` ブランチからの push / 手動実行時だけ `apply` を実行する
+- `main` ブランチへの push / 手動実行時だけ `apply` を実行する
 - main 以外のブランチから手動実行した場合は `apply` を実行しない
 
 > ヒント:
