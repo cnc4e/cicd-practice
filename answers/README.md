@@ -102,3 +102,10 @@
 | 5-3. apply の実行条件を制御する                     | [5-3_skip-on-pr.md](./gitlab-ci/05-cd/5-3_skip-on-pr.md)   |
 | 5-4. apply 前に手動承認を挟む                       | [5-4_environment.md](./gitlab-ci/05-cd/5-4_environment.md) |
 | 5-5. plan 結果を利用して terraform apply を実行する | [5-5_apply.md](./gitlab-ci/05-cd/5-5_apply.md)             |
+
+### Step 6: Runner 編
+
+| プラクティス                                    | 解答                                                                        |
+| ----------------------------------------------- | --------------------------------------------------------------------------- |
+| 6-2. GitLab-hosted runner で環境を確認する      | [6-2_gitlab-hosted.md](./gitlab-ci/06-runner/6-2_gitlab-hosted.md)         |
+| 6-5. Self-managed runner で pipeline を実行する | [6-5_self-managed-run.md](./gitlab-ci/06-runner/6-5_self-managed-run.md)   |
