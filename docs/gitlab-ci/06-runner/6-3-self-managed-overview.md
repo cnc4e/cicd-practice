@@ -23,7 +23,7 @@ Self-managed runner は、次のような場合に使用されます。
 - GPU など特定のハードウェアが必要
 - 大規模ビルドや負荷の高いテストなど、より高い CPU / メモリ性能が必要（GitLab-hosted runner の標準スペックでは不足する）
 - 独自のソフトウェアや設定が必要な環境で実行したい
-- コスト面で GitLab-hosted runner の無料枠では足りない
+- コスト面で GitLab-hosted runner の [プランごとの利用可能枠](https://docs.gitlab.com/ci/pipelines/compute_minutes/) を超えてしまう場合
 
 なお、実際のプロジェクトでは物理マシンや VM のほかに、Kubernetes 上で runner を管理する [GitLab Runner Operator](https://docs.gitlab.com/runner/install/operator/) や [GitLab Runner Helm Chart](https://docs.gitlab.com/runner/install/kubernetes/) が採用されることもあります。大規模な環境やコンテナ基盤を中心に構成されたプロジェクトでは、こうした選択肢も検討してみてください。
 
