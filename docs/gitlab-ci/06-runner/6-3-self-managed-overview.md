@@ -24,8 +24,9 @@ Self-managed runner は、次のような場合に使用されます。
 - 大規模ビルドや負荷の高いテストなど、より高い CPU / メモリ性能が必要（GitLab-hosted runner の標準スペックでは不足する）
 - 独自のソフトウェアや設定が必要な環境で実行したい
 - コスト面で GitLab-hosted runner の [プランごとの利用可能枠](https://docs.gitlab.com/ci/pipelines/compute_minutes/) を超えてしまう場合
+- あるいは、GitLab 以外の実行基盤として AWS CodeBuild などを使う構成に切り分けたい場合
 
-なお、実際のプロジェクトでは物理マシンや VM のほかに、Kubernetes 上で runner を管理する [GitLab Runner Operator](https://docs.gitlab.com/runner/install/operator/) や [GitLab Runner Helm Chart](https://docs.gitlab.com/runner/install/kubernetes/) が採用されることもあります。大規模な環境やコンテナ基盤を中心に構成されたプロジェクトでは、こうした選択肢も検討してみてください。
+なお、実際のプロジェクトでは物理マシンや VM のほかに、Kubernetes 上で runner を管理する [GitLab Runner Operator](https://docs.gitlab.com/runner/install/operator/) や [GitLab Runner Helm Chart](https://docs.gitlab.com/runner/install/kubernetes/) が採用されることもあります。また、GitLab CI/CD だけでなく AWS CodeBuild のような外部実行基盤を併用する構成も実務では見られます。大規模な環境やコンテナ基盤を中心に構成されたプロジェクトでは、こうした選択肢も検討してみてください。
 
 ## セキュリティ上の注意点
 
